@@ -1,0 +1,25 @@
+.jumbotron {
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
+.cases-chart .ct-series-a .ct-line,
+.cases-chart .ct-series-a .ct-point {
+  stroke: blue;
+}
+.cases-chart .ct-series-a .ct-area {
+    fill: blue;
+}
+.deaths-chart .ct-series-a .ct-line,
+.deaths-chart .ct-series-a .ct-point {
+  stroke: purple;
+}
+.deaths-chart .ct-series-a .ct-area {
+    fill: purple;
+}
+.recovery-chart .ct-series-a .ct-line,
+.recovery-chart .ct-series-a .ct-point {
+  stroke: green;
+}
+.recovery-chart .ct-series-a .ct-area {
+    fill: green;
+}
