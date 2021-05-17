@@ -1,7 +1,6 @@
 import React from 'react';
 import Chartist from 'chartist';
 import ChartistGraph from 'react-chartist';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import makeRequest from '../xhr/fetchApi';
 import Alert from 'react-bootstrap/Alert';
 import Badge from 'react-bootstrap/Badge'

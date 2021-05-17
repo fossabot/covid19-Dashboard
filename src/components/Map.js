@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import makeRequest from '../xhr/fetchApi';
 
@@ -15,15 +15,12 @@ export default class Map extends Component {
         const res = makeRequest({
             url : 'https://corona.lmao.ninja/v3/covid-19/countries'
         });
-       // let data = res.then(data => data);
        res.then(data => {
            this.setState({countries: Array.from(data)});
        });
     };
 
     render() {
-        //const countries = this.state.countries;
-       // console.log('this.state.countries',this.state.countries);
         const markerList = this.state.countries.map((country) =>
             <Marker position={[country.countryInfo.lat, country.countryInfo.long]}>
                 <Popup>
@@ -38,7 +35,6 @@ export default class Map extends Component {
         );
         return (
             <React.Fragment>
-            {/* Stack the columns on mobile by making one full-width and the other half-width */}
             <Row className="justify-content-md-center">
                 <Col xs={12} lg={11}>
                     <MapContainer center={[this.state.lat, this.state.lng]} zoom={this.state.zoom} scrollWheelZoom={true}>
